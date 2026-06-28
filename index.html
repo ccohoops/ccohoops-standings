@@ -295,7 +295,7 @@ async function loadStandings(){
 
   let data;
   try{
-    const res = await fetch('standings.json', { cache: 'no-store' });
+    const res = await fetch('standings.json?t=' + Date.now(), { cache: 'no-store' });
     if(!res.ok) throw new Error('HTTP ' + res.status);
     data = await res.json();
   }catch(err){
@@ -384,18 +384,41 @@ async function loadStandings(){
     content.appendChild(section);
   });
 
-  // keep the select reflecting whichever division is in view while scrolling
+  // keep the select reflecting whichever division is actually at the top of the viewport
   const sections = Array.from(content.querySelectorAll('.division'));
-  if('IntersectionObserver' in window && sections.length){
-    const obs = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting){
-          jumpSelect.value = entry.target.id;
-        }
-      });
-    }, { rootMargin: '-40% 0px -50% 0px' });
-    sections.forEach(s => obs.observe(s));
+  const topbarEl = document.querySelector('.topbar');
+  if(sections.length){
+    setupScrollSpy(sections, jumpSelect, topbarEl);
   }
+}
+
+function setupScrollSpy(sections, jumpSelect, topbarEl){
+  let ticking = false;
+
+  function update(){
+    const offset = (topbarEl ? topbarEl.getBoundingClientRect().height : 90) + 16;
+    let current = sections[0];
+    for(const sec of sections){
+      if(sec.getBoundingClientRect().top - offset <= 0){
+        current = sec;
+      } else {
+        break; // sections are in document order, so once one is below the threshold the rest are too
+      }
+    }
+    if(jumpSelect.value !== current.id){
+      jumpSelect.value = current.id;
+    }
+    ticking = false;
+  }
+
+  window.addEventListener('scroll', () => {
+    if(!ticking){
+      requestAnimationFrame(update);
+      ticking = true;
+    }
+  }, { passive: true });
+
+  update();
 }
 
 function slugify(name, index){
