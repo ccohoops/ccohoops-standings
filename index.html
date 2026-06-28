@@ -206,25 +206,12 @@
   tbody tr:last-child td{ border-bottom: none; }
   tbody tr{ background: var(--surface); transition: background .15s ease; }
   tbody tr:hover{ background: var(--surface-2); }
-  tbody tr.leader{ background: linear-gradient(90deg, rgba(226,114,42,0.14), rgba(226,114,42,0.03)); }
 
   .rank{
     font-family: 'IBM Plex Mono', monospace;
     font-weight: 600;
     font-size: 13px;
     color: var(--chalk-dim);
-  }
-  .rank-badge{
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 22px; height: 22px;
-    border-radius: 50%;
-    background: var(--ball);
-    color: var(--ink);
-    font-family: 'IBM Plex Mono', monospace;
-    font-weight: 600;
-    font-size: 12px;
   }
   .team-name{
     font-family: 'Inter', sans-serif;
@@ -440,12 +427,8 @@ function buildTable(div, columns){
   const tbody = document.createElement('tbody');
   teams.forEach((team, idx) => {
     const tr = document.createElement('tr');
-    const isLeader = Number(team.rank) === 1 || idx === 0;
-    if(isLeader) tr.classList.add('leader');
 
-    const rankCell = isLeader
-      ? `<span class="rank-badge">${escapeHtml(team.rank ?? idx + 1)}</span>`
-      : `<span class="rank">${escapeHtml(team.rank ?? idx + 1)}</span>`;
+    const rankCell = `<span class="rank">${escapeHtml(team.rank ?? idx + 1)}</span>`;
 
     const statCells = columns.map(c => `<td class="stat">${escapeHtml(team[c.key] ?? '—')}</td>`).join('');
 
