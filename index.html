@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CCO Hoops — Standings</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8F%80%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink: #1A1611;
+    --surface: #241F17;
+    --surface-2: #2C2618;
+    --line: #4A3F2C;
+    --chalk: #EDE6D6;
+    --chalk-dim: #A89C84;
+    --ball: #E2722A;
+    --rim: #8B2E2A;
+    --net: #7C9478;
+    --radius: 10px;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+
+  body{
+    background: var(--ink);
+    color: var(--chalk);
+    font-family: 'Inter', system-ui, sans-serif;
+    line-height: 1.4;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: inherit; }
+
+  /* ---------- Top bar ---------- */
+  .topbar{
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: rgba(26,22,17,0.92);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--line);
+    padding: 18px 20px 0;
+  }
+  .topbar-inner{
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .brand-row{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 14px;
+  }
+  .brand{
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--chalk);
+  }
+  .brand span{ color: var(--ball); }
+  .updated{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    color: var(--chalk-dim);
+    letter-spacing: 0.02em;
+  }
+
+  .chip-row{
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding-bottom: 14px;
+    scrollbar-width: thin;
+  }
+  .chip-row::-webkit-scrollbar{ height: 4px; }
+  .chip-row::-webkit-scrollbar-thumb{ background: var(--line); border-radius: 4px; }
+
+  .chip{
+    flex: 0 0 auto;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--chalk-dim);
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 7px 14px;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color .15s ease, border-color .15s ease, background .15s ease;
+  }
+  .chip:hover{ color: var(--chalk); border-color: var(--ball); }
+  .chip.active{
+    color: var(--ink);
+    background: var(--ball);
+    border-color: var(--ball);
+  }
+  .chip:focus-visible{ outline: 2px solid var(--ball); outline-offset: 2px; }
+
+  /* ---------- Main ---------- */
+  main{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 36px 20px 80px;
+  }
+
+  .division{
+    margin-bottom: 56px;
+    scroll-margin-top: 110px;
+  }
+
+  .division-head{
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 4px;
+  }
+  .ball-dot{
+    width: 9px; height: 9px;
+    border-radius: 50%;
+    background: var(--ball);
+    flex: 0 0 auto;
+  }
+  .eyebrow{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--chalk-dim);
+  }
+  .division-name{
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 26px;
+    margin: 4px 0 4px;
+    color: var(--chalk);
+  }
+  .division-meta{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    color: var(--chalk-dim);
+    margin-bottom: 16px;
+  }
+
+  .table-wrap{
+    overflow-x: auto;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+  }
+  table{
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 460px;
+  }
+  thead th{
+    background: var(--surface-2);
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--chalk-dim);
+    text-align: right;
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--line);
+  }
+  thead th:nth-child(1), thead th:nth-child(2){ text-align: left; }
+
+  tbody td{
+    padding: 11px 14px;
+    font-size: 14px;
+    border-bottom: 1px solid var(--line);
+    text-align: right;
+    white-space: nowrap;
+  }
+  tbody td:nth-child(1), tbody td:nth-child(2){ text-align: left; }
+  tbody tr:last-child td{ border-bottom: none; }
+  tbody tr{ background: var(--surface); transition: background .15s ease; }
+  tbody tr:hover{ background: var(--surface-2); }
+  tbody tr.leader{ background: linear-gradient(90deg, rgba(226,114,42,0.14), rgba(226,114,42,0.03)); }
+
+  .rank{
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--chalk-dim);
+  }
+  .rank-badge{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px; height: 22px;
+    border-radius: 50%;
+    background: var(--ball);
+    color: var(--ink);
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 600;
+    font-size: 12px;
+  }
+  .team-name{
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--chalk);
+  }
+  .stat{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13.5px;
+    color: var(--chalk);
+  }
+
+  /* ---------- Empty / error state ---------- */
+  .state{
+    border: 1px dashed var(--line);
+    border-radius: var(--radius);
+    padding: 40px 24px;
+    text-align: center;
+    color: var(--chalk-dim);
+    font-size: 14px;
+  }
+  .state strong{ color: var(--chalk); display:block; margin-bottom: 6px; font-family:'Oswald', sans-serif; font-size: 16px; letter-spacing: 0.02em; }
+
+  footer{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px 40px;
+    color: var(--chalk-dim);
+    font-size: 12px;
+    font-family: 'IBM Plex Mono', monospace;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{ transition: none !important; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="topbar-inner">
+      <div class="brand-row">
+        <div class="brand">CCO <span>HOOPS</span> — Standings</div>
+        <div class="updated" id="updated-text">Loading…</div>
+      </div>
+      <nav class="chip-row" id="chip-row" aria-label="Jump to division"></nav>
+    </div>
+  </div>
+
+  <main id="content">
+    <div class="state"><strong>Loading standings…</strong></div>
+  </main>
+
+  <footer id="footer-text"></footer>
+
+<script>
+async function loadStandings(){
+  const content = document.getElementById('content');
+  const chipRow = document.getElementById('chip-row');
+  const updatedText = document.getElementById('updated-text');
+  const footerText = document.getElementById('footer-text');
+
+  let data;
+  try{
+    const res = await fetch('standings.json', { cache: 'no-store' });
+    if(!res.ok) throw new Error('HTTP ' + res.status);
+    data = await res.json();
+  }catch(err){
+    content.innerHTML = `
+      <div class="state">
+        <strong>Standings aren't loaded yet</strong>
+        Drop a valid standings.json into this site's folder and refresh.
+      </div>`;
+    return;
+  }
+
+  if(!data.divisions || !data.divisions.length){
+    content.innerHTML = `
+      <div class="state">
+        <strong>No divisions found</strong>
+        standings.json loaded, but it doesn't contain any divisions.
+      </div>`;
+    return;
+  }
+
+  if(data.updated){
+    const d = new Date(data.updated);
+    const formatted = isNaN(d) ? data.updated : d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+    updatedText.textContent = (data.season ? data.season + ' · ' : '') + 'Updated ' + formatted;
+  } else {
+    updatedText.textContent = data.season || '';
+  }
+
+  footerText.textContent = 'ccohoops.com' + (data.season ? ' · ' + data.season : '');
+
+  content.innerHTML = '';
+  chipRow.innerHTML = '';
+
+  data.divisions.forEach((div, i) => {
+    const slug = 'div-' + i + '-' + (div.name || 'division').toLowerCase().replace(/[^a-z0-9]+/g, '-');
+
+    // chip nav
+    const chip = document.createElement('a');
+    chip.href = '#' + slug;
+    chip.className = 'chip';
+    chip.textContent = div.name || 'Division';
+    chipRow.appendChild(chip);
+
+    // section
+    const section = document.createElement('section');
+    section.className = 'division';
+    section.id = slug;
+
+    const teamCount = (div.teams || []).length;
+    section.innerHTML = `
+      <div class="division-head">
+        <span class="ball-dot"></span>
+        <span class="eyebrow">Division</span>
+      </div>
+      <h2 class="division-name">${escapeHtml(div.name || 'Division')}</h2>
+      <div class="division-meta">${teamCount} team${teamCount === 1 ? '' : 's'}</div>
+      <div class="table-wrap"></div>
+    `;
+
+    const wrap = section.querySelector('.table-wrap');
+    wrap.appendChild(buildTable(div));
+    content.appendChild(section);
+  });
+
+  // highlight active chip on scroll
+  const chips = Array.from(chipRow.querySelectorAll('.chip'));
+  const sections = Array.from(content.querySelectorAll('.division'));
+  if('IntersectionObserver' in window && sections.length){
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          const id = entry.target.id;
+          chips.forEach(c => c.classList.toggle('active', c.getAttribute('href') === '#' + id));
+        }
+      });
+    }, { rootMargin: '-40% 0px -50% 0px' });
+    sections.forEach(s => obs.observe(s));
+  }
+}
+
+function buildTable(div){
+  const columns = div.columns || [];
+  const teams = div.teams || [];
+
+  const table = document.createElement('table');
+
+  const thead = document.createElement('thead');
+  const headRow = document.createElement('tr');
+  headRow.innerHTML = '<th>Rank</th><th>Team</th>' +
+    columns.map(c => `<th>${escapeHtml(c.label || c.key)}</th>`).join('');
+  thead.appendChild(headRow);
+  table.appendChild(thead);
+
+  const tbody = document.createElement('tbody');
+  teams.forEach((team, idx) => {
+    const tr = document.createElement('tr');
+    const isLeader = Number(team.rank) === 1 || idx === 0;
+    if(isLeader) tr.classList.add('leader');
+
+    const rankCell = isLeader
+      ? `<span class="rank-badge">${escapeHtml(team.rank ?? idx + 1)}</span>`
+      : `<span class="rank">${escapeHtml(team.rank ?? idx + 1)}</span>`;
+
+    const statCells = columns.map(c => `<td class="stat">${escapeHtml(team[c.key] ?? '—')}</td>`).join('');
+
+    tr.innerHTML = `<td>${rankCell}</td><td class="team-name">${escapeHtml(team.team || '—')}</td>${statCells}`;
+    tbody.appendChild(tr);
+  });
+  table.appendChild(tbody);
+
+  return table;
+}
+
+function escapeHtml(value){
+  return String(value).replace(/[&<>"']/g, ch => ({
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+  }[ch]));
+}
+
+loadStandings();
+</script>
+
+</body>
+</html>
