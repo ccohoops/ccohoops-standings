@@ -73,37 +73,58 @@
     letter-spacing: 0.02em;
   }
 
-  .chip-row{
+  .jump-row{
     display: flex;
-    gap: 8px;
-    overflow-x: auto;
+    align-items: center;
+    gap: 10px;
     padding-bottom: 14px;
-    scrollbar-width: thin;
   }
-  .chip-row::-webkit-scrollbar{ height: 4px; }
-  .chip-row::-webkit-scrollbar-thumb{ background: var(--line); border-radius: 4px; }
-
-  .chip{
+  .jump-label{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--chalk-dim);
     flex: 0 0 auto;
+  }
+  .jump-select-wrap{
+    position: relative;
+    flex: 1 1 auto;
+    max-width: 360px;
+  }
+  select.jump-select{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
     font-family: 'Inter', sans-serif;
     font-weight: 600;
-    font-size: 13px;
-    color: var(--chalk-dim);
+    font-size: 14px;
+    color: var(--chalk);
     background: var(--surface);
     border: 1px solid var(--line);
     border-radius: 999px;
-    padding: 7px 14px;
-    text-decoration: none;
-    white-space: nowrap;
-    transition: color .15s ease, border-color .15s ease, background .15s ease;
+    padding: 9px 36px 9px 16px;
+    cursor: pointer;
+    transition: border-color .15s ease;
   }
-  .chip:hover{ color: var(--chalk); border-color: var(--ball); }
-  .chip.active{
-    color: var(--ink);
-    background: var(--ball);
-    border-color: var(--ball);
+  select.jump-select:hover{ border-color: var(--ball); }
+  select.jump-select:focus-visible{ outline: 2px solid var(--ball); outline-offset: 2px; }
+  .jump-select-wrap::after{
+    content: '';
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid var(--chalk-dim);
+    border-bottom: 2px solid var(--chalk-dim);
+    transform: translateY(-65%) rotate(45deg);
+    pointer-events: none;
   }
-  .chip:focus-visible{ outline: 2px solid var(--ball); outline-offset: 2px; }
+  select.jump-select option, select.jump-select optgroup{
+    background: var(--surface);
+    color: var(--chalk);
+  }
 
   /* ---------- Main ---------- */
   main{
@@ -250,7 +271,12 @@
         <div class="brand">CCO <span>HOOPS</span> — Standings</div>
         <div class="updated" id="updated-text">Loading…</div>
       </div>
-      <nav class="chip-row" id="chip-row" aria-label="Jump to division"></nav>
+      <div class="jump-row">
+        <label class="jump-label" for="division-jump">Jump to</label>
+        <div class="jump-select-wrap">
+          <select class="jump-select" id="division-jump" aria-label="Jump to division"></select>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -263,7 +289,7 @@
 <script>
 async function loadStandings(){
   const content = document.getElementById('content');
-  const chipRow = document.getElementById('chip-row');
+  const jumpSelect = document.getElementById('division-jump');
   const updatedText = document.getElementById('updated-text');
   const footerText = document.getElementById('footer-text');
 
@@ -290,6 +316,8 @@ async function loadStandings(){
     return;
   }
 
+  const columns = data.columns || [];
+
   if(data.updated){
     const d = new Date(data.updated);
     const formatted = isNaN(d) ? data.updated : d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
@@ -301,19 +329,41 @@ async function loadStandings(){
   footerText.textContent = 'ccohoops.com' + (data.season ? ' · ' + data.season : '');
 
   content.innerHTML = '';
-  chipRow.innerHTML = '';
+  jumpSelect.innerHTML = '';
+
+  // group divisions for the select (optgroups) while preserving original order within each group
+  const groups = [];
+  const groupMap = {};
+  data.divisions.forEach((div, i) => {
+    const groupName = div.group || 'Divisions';
+    if(!groupMap[groupName]){
+      groupMap[groupName] = [];
+      groups.push(groupName);
+    }
+    groupMap[groupName].push({ div, index: i });
+  });
+
+  groups.forEach(groupName => {
+    const optgroup = document.createElement('optgroup');
+    optgroup.label = groupName;
+    groupMap[groupName].forEach(({ div, index }) => {
+      const slug = slugify(div.name, index);
+      const opt = document.createElement('option');
+      opt.value = slug;
+      opt.textContent = div.name || 'Division';
+      optgroup.appendChild(opt);
+    });
+    jumpSelect.appendChild(optgroup);
+  });
+
+  jumpSelect.addEventListener('change', () => {
+    const target = document.getElementById(jumpSelect.value);
+    if(target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
 
   data.divisions.forEach((div, i) => {
-    const slug = 'div-' + i + '-' + (div.name || 'division').toLowerCase().replace(/[^a-z0-9]+/g, '-');
+    const slug = slugify(div.name, i);
 
-    // chip nav
-    const chip = document.createElement('a');
-    chip.href = '#' + slug;
-    chip.className = 'chip';
-    chip.textContent = div.name || 'Division';
-    chipRow.appendChild(chip);
-
-    // section
     const section = document.createElement('section');
     section.className = 'division';
     section.id = slug;
@@ -322,7 +372,7 @@ async function loadStandings(){
     section.innerHTML = `
       <div class="division-head">
         <span class="ball-dot"></span>
-        <span class="eyebrow">Division</span>
+        <span class="eyebrow">${escapeHtml(div.group || 'Division')}</span>
       </div>
       <h2 class="division-name">${escapeHtml(div.name || 'Division')}</h2>
       <div class="division-meta">${teamCount} team${teamCount === 1 ? '' : 's'}</div>
@@ -330,19 +380,17 @@ async function loadStandings(){
     `;
 
     const wrap = section.querySelector('.table-wrap');
-    wrap.appendChild(buildTable(div));
+    wrap.appendChild(buildTable(div, columns));
     content.appendChild(section);
   });
 
-  // highlight active chip on scroll
-  const chips = Array.from(chipRow.querySelectorAll('.chip'));
+  // keep the select reflecting whichever division is in view while scrolling
   const sections = Array.from(content.querySelectorAll('.division'));
   if('IntersectionObserver' in window && sections.length){
     const obs = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if(entry.isIntersecting){
-          const id = entry.target.id;
-          chips.forEach(c => c.classList.toggle('active', c.getAttribute('href') === '#' + id));
+          jumpSelect.value = entry.target.id;
         }
       });
     }, { rootMargin: '-40% 0px -50% 0px' });
@@ -350,8 +398,11 @@ async function loadStandings(){
   }
 }
 
-function buildTable(div){
-  const columns = div.columns || [];
+function slugify(name, index){
+  return 'div-' + index + '-' + (name || 'division').toLowerCase().replace(/[^a-z0-9]+/g, '-');
+}
+
+function buildTable(div, columns){
   const teams = div.teams || [];
 
   const table = document.createElement('table');
