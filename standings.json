@@ -196,6 +196,10 @@
           "pa": 257,
           "pd": -30
         }
+      ],
+      "tiebreak_notes": [
+        "Lakers and Bulls ranked by head-to-head result (Lakers won 43-37).",
+        "Knicks, Warriors and Celtics ranked by total points scored."
       ]
     },
     {
@@ -356,6 +360,10 @@
           "pa": 212,
           "pd": -59
         }
+      ],
+      "tiebreak_notes": [
+        "Knicks, Bulls and Suns ranked by total points scored.",
+        "Thunder and Lakers ranked by head-to-head result (Thunder won 59-38)."
       ]
     },
     {
@@ -430,17 +438,6 @@
         },
         {
           "rank": 7,
-          "team": "Pacers",
-          "w": 2,
-          "l": 1,
-          "gp": 3,
-          "pct": "66.7%",
-          "pf": 153,
-          "pa": 101,
-          "pd": 52
-        },
-        {
-          "rank": 8,
           "team": "Spurs",
           "w": 2,
           "l": 1,
@@ -449,6 +446,17 @@
           "pf": 81,
           "pa": 125,
           "pd": -44
+        },
+        {
+          "rank": 8,
+          "team": "Pacers",
+          "w": 2,
+          "l": 1,
+          "gp": 3,
+          "pct": "66.7%",
+          "pf": 153,
+          "pa": 101,
+          "pd": 52
         },
         {
           "rank": 9,
@@ -516,6 +524,12 @@
           "pa": 181,
           "pd": -83
         }
+      ],
+      "tiebreak_notes": [
+        "Celtics and Hornets ranked by total points scored.",
+        "Lakers, Warriors and Knicks ranked by total points scored.",
+        "Spurs and Pacers ranked by head-to-head result (Spurs won 36-28).",
+        "Nuggets, Clippers and Thunder ranked by total points scored."
       ]
     },
     {
@@ -676,6 +690,11 @@
           "pa": 0,
           "pd": 0
         }
+      ],
+      "tiebreak_notes": [
+        "Rockets and Clippers ranked by total points scored.",
+        "Warriors, Bulls and Magic ranked by total points scored.",
+        "Pacers and Knicks ranked by total points scored."
       ]
     },
     {
@@ -836,6 +855,11 @@
           "pa": 0,
           "pd": 0
         }
+      ],
+      "tiebreak_notes": [
+        "Pacers, Bulls and Thunder ranked by total points scored.",
+        "Clippers and Pistons ranked by total points scored.",
+        "Suns and Wizards ranked by total points scored."
       ]
     },
     {
@@ -1060,17 +1084,6 @@
       "teams": [
         {
           "rank": 1,
-          "team": "Thunder",
-          "w": 7,
-          "l": 1,
-          "gp": 8,
-          "pct": "87.5%",
-          "pf": 166,
-          "pa": 116,
-          "pd": 50
-        },
-        {
-          "rank": 2,
           "team": "Heat",
           "w": 7,
           "l": 1,
@@ -1079,6 +1092,17 @@
           "pf": 125,
           "pa": 89,
           "pd": 36
+        },
+        {
+          "rank": 2,
+          "team": "Thunder",
+          "w": 7,
+          "l": 1,
+          "gp": 8,
+          "pct": "87.5%",
+          "pf": 166,
+          "pa": 116,
+          "pd": 50
         },
         {
           "rank": 3,
@@ -1135,6 +1159,9 @@
           "pa": 142,
           "pd": -37
         }
+      ],
+      "tiebreak_notes": [
+        "Heat and Thunder ranked by head-to-head result (Heat won 17-12)."
       ]
     }
   ]
