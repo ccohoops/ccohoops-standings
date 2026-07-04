@@ -235,7 +235,20 @@
   }
   .state strong{ color: #1a1a1a; display:block; margin-bottom: 6px; font-family:'Oswald', sans-serif; font-size: 16px; letter-spacing: 0.02em; }
 
-  footer{
+  .tiebreak-notes{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .tiebreak-note{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    color: #555;
+    padding-left: 4px;
+    border-left: 3px solid #ccc;
+    line-height: 1.5;
+  }
     max-width: 1000px;
     margin: 0 auto;
     padding: 0 20px 40px;
@@ -367,6 +380,19 @@ async function loadStandings(){
 
     const wrap = section.querySelector('.table-wrap');
     wrap.appendChild(buildTable(div, columns));
+
+    if(div.tiebreak_notes && div.tiebreak_notes.length){
+      const notesEl = document.createElement('div');
+      notesEl.className = 'tiebreak-notes';
+      div.tiebreak_notes.forEach(note => {
+        const p = document.createElement('p');
+        p.className = 'tiebreak-note';
+        p.textContent = note;
+        notesEl.appendChild(p);
+      });
+      section.appendChild(notesEl);
+    }
+
     content.appendChild(section);
   });
 
