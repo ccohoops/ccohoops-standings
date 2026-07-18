@@ -1,6 +1,6 @@
 {
   "season": "Summer 2026",
-  "updated": "2026-07-17",
+  "updated": "2026-07-18",
   "columns": [
     {
       "key": "w",
@@ -39,13 +39,13 @@
         {
           "rank": 1,
           "team": "Heat",
-          "w": 8,
+          "w": 9,
           "l": 1,
-          "gp": 9,
-          "pct": "88.9%",
-          "pf": 504,
-          "pa": 412,
-          "pd": 92
+          "gp": 10,
+          "pct": "90.0%",
+          "pf": 567,
+          "pa": 455,
+          "pd": 112
         },
         {
           "rank": 2,
@@ -61,13 +61,13 @@
         {
           "rank": 3,
           "team": "Celtics",
-          "w": 5,
+          "w": 6,
           "l": 5,
-          "gp": 10,
-          "pct": "50.0%",
-          "pf": 513,
-          "pa": 489,
-          "pd": 24
+          "gp": 11,
+          "pct": "54.5%",
+          "pf": 577,
+          "pa": 537,
+          "pd": 40
         },
         {
           "rank": 4,
@@ -84,12 +84,12 @@
           "rank": 5,
           "team": "Jr All-Stars",
           "w": 0,
-          "l": 4,
-          "gp": 4,
+          "l": 6,
+          "gp": 6,
           "pct": "0.0%",
-          "pf": 198,
-          "pa": 223,
-          "pd": -25
+          "pf": 289,
+          "pa": 350,
+          "pd": -61
         }
       ]
     },
@@ -99,28 +99,17 @@
       "teams": [
         {
           "rank": 1,
-          "team": "Pistons",
-          "w": 7,
+          "team": "Heat",
+          "w": 9,
           "l": 1,
-          "gp": 8,
-          "pct": "87.5%",
-          "pf": 416,
-          "pa": 365,
-          "pd": 51
+          "gp": 10,
+          "pct": "90.0%",
+          "pf": 487,
+          "pa": 393,
+          "pd": 94
         },
         {
           "rank": 2,
-          "team": "Heat",
-          "w": 7,
-          "l": 1,
-          "gp": 8,
-          "pct": "87.5%",
-          "pf": 394,
-          "pa": 339,
-          "pd": 55
-        },
-        {
-          "rank": 3,
           "team": "Lakers",
           "w": 6,
           "l": 2,
@@ -129,6 +118,17 @@
           "pf": 416,
           "pa": 361,
           "pd": 55
+        },
+        {
+          "rank": 3,
+          "team": "Pistons",
+          "w": 7,
+          "l": 3,
+          "gp": 10,
+          "pct": "70.0%",
+          "pf": 496,
+          "pa": 467,
+          "pd": 29
         },
         {
           "rank": 4,
@@ -144,13 +144,13 @@
         {
           "rank": 5,
           "team": "Thunder",
-          "w": 5,
-          "l": 3,
-          "gp": 8,
-          "pct": "62.5%",
-          "pf": 377,
-          "pa": 365,
-          "pd": 12
+          "w": 6,
+          "l": 4,
+          "gp": 10,
+          "pct": "60.0%",
+          "pf": 467,
+          "pa": 453,
+          "pd": 14
         },
         {
           "rank": 6,
@@ -166,24 +166,24 @@
         {
           "rank": 7,
           "team": "Warriors",
-          "w": 2,
-          "l": 6,
-          "gp": 8,
-          "pct": "25.0%",
-          "pf": 312,
-          "pa": 337,
-          "pd": -25
+          "w": 3,
+          "l": 7,
+          "gp": 10,
+          "pct": "30.0%",
+          "pf": 378,
+          "pa": 422,
+          "pd": -44
         },
         {
           "rank": 8,
           "team": "Hornets",
-          "w": 1,
+          "w": 2,
           "l": 7,
-          "gp": 8,
-          "pct": "12.5%",
-          "pf": 337,
-          "pa": 412,
-          "pd": -75
+          "gp": 9,
+          "pct": "22.2%",
+          "pf": 388,
+          "pa": 415,
+          "pd": -27
         },
         {
           "rank": 9,
@@ -196,10 +196,6 @@
           "pa": 432,
           "pd": -52
         }
-      ],
-      "tiebreak_notes": [
-        "Pistons and Heat ranked by head-to-head result (Pistons won 60-45).",
-        "Bulls and Thunder ranked by head-to-head result (Bulls won 55-51)."
       ]
     },
     {
@@ -209,16 +205,27 @@
         {
           "rank": 1,
           "team": "Heat",
-          "w": 8,
+          "w": 9,
           "l": 0,
-          "gp": 8,
+          "gp": 9,
           "pct": "100.0%",
-          "pf": 397,
-          "pa": 285,
-          "pd": 112
+          "pf": 456,
+          "pa": 322,
+          "pd": 134
         },
         {
           "rank": 2,
+          "team": "Pacers",
+          "w": 8,
+          "l": 2,
+          "gp": 10,
+          "pct": "80.0%",
+          "pf": 410,
+          "pa": 339,
+          "pd": 71
+        },
+        {
+          "rank": 3,
           "team": "Hornets",
           "w": 7,
           "l": 2,
@@ -229,143 +236,130 @@
           "pd": 135
         },
         {
-          "rank": 3,
-          "team": "Pacers",
-          "w": 6,
-          "l": 2,
-          "gp": 8,
-          "pct": "75.0%",
-          "pf": 329,
-          "pa": 264,
-          "pd": 65
-        },
-        {
           "rank": 4,
-          "team": "Warriors",
+          "team": "Suns",
           "w": 5,
           "l": 3,
           "gp": 8,
           "pct": "62.5%",
-          "pf": 328,
-          "pa": 304,
-          "pd": 24
+          "pf": 299,
+          "pa": 253,
+          "pd": 46
         },
         {
           "rank": 5,
           "team": "Celtics",
-          "w": 4,
+          "w": 5,
           "l": 4,
-          "gp": 8,
-          "pct": "50.0%",
-          "pf": 330,
-          "pa": 332,
-          "pd": -2
+          "gp": 9,
+          "pct": "55.6%",
+          "pf": 377,
+          "pa": 372,
+          "pd": 5
         },
         {
           "rank": 6,
-          "team": "Suns",
-          "w": 3,
-          "l": 3,
-          "gp": 6,
+          "team": "Bulls",
+          "w": 5,
+          "l": 5,
+          "gp": 10,
           "pct": "50.0%",
-          "pf": 223,
-          "pa": 195,
-          "pd": 28
+          "pf": 441,
+          "pa": 344,
+          "pd": 97
         },
         {
           "rank": 7,
           "team": "Knicks",
-          "w": 4,
+          "w": 5,
           "l": 5,
-          "gp": 9,
-          "pct": "44.4%",
-          "pf": 381,
-          "pa": 418,
-          "pd": -37
+          "gp": 10,
+          "pct": "50.0%",
+          "pf": 422,
+          "pa": 458,
+          "pd": -36
         },
         {
           "rank": 8,
-          "team": "Bulls",
+          "team": "Warriors",
+          "w": 5,
+          "l": 5,
+          "gp": 10,
+          "pct": "50.0%",
+          "pf": 388,
+          "pa": 372,
+          "pd": 16
+        },
+        {
+          "rank": 9,
+          "team": "Clippers",
           "w": 4,
           "l": 5,
           "gp": 9,
           "pct": "44.4%",
-          "pf": 395,
-          "pa": 326,
-          "pd": 69
-        },
-        {
-          "rank": 9,
-          "team": "Thunder",
-          "w": 3,
-          "l": 4,
-          "gp": 7,
-          "pct": "42.9%",
-          "pf": 269,
-          "pa": 313,
-          "pd": -44
+          "pf": 335,
+          "pa": 317,
+          "pd": 18
         },
         {
           "rank": 10,
           "team": "Spurs",
           "w": 3,
-          "l": 4,
-          "gp": 7,
-          "pct": "42.9%",
-          "pf": 264,
-          "pa": 352,
-          "pd": -88
-        },
-        {
-          "rank": 11,
-          "team": "Lakers",
-          "w": 3,
           "l": 6,
           "gp": 9,
           "pct": "33.3%",
-          "pf": 317,
-          "pa": 421,
-          "pd": -104
+          "pf": 302,
+          "pa": 433,
+          "pd": -131
+        },
+        {
+          "rank": 11,
+          "team": "Thunder",
+          "w": 3,
+          "l": 7,
+          "gp": 10,
+          "pct": "30.0%",
+          "pf": 379,
+          "pa": 461,
+          "pd": -82
         },
         {
           "rank": 12,
-          "team": "Wizards",
-          "w": 2,
-          "l": 5,
-          "gp": 7,
-          "pct": "28.6%",
-          "pf": 283,
-          "pa": 321,
-          "pd": -38
+          "team": "Lakers",
+          "w": 3,
+          "l": 7,
+          "gp": 10,
+          "pct": "30.0%",
+          "pf": 325,
+          "pa": 475,
+          "pd": -150
         },
         {
           "rank": 13,
-          "team": "Clippers",
+          "team": "Wizards",
           "w": 2,
-          "l": 5,
-          "gp": 7,
-          "pct": "28.6%",
-          "pf": 246,
-          "pa": 289,
-          "pd": -43
+          "l": 6,
+          "gp": 8,
+          "pct": "25.0%",
+          "pf": 323,
+          "pa": 362,
+          "pd": -39
         },
         {
           "rank": 14,
           "team": "Pistons",
           "w": 1,
-          "l": 7,
-          "gp": 8,
-          "pct": "12.5%",
-          "pf": 300,
-          "pa": 377,
-          "pd": -77
+          "l": 8,
+          "gp": 9,
+          "pct": "11.1%",
+          "pf": 340,
+          "pa": 424,
+          "pd": -84
         }
       ],
       "tiebreak_notes": [
-        "Celtics and Suns ranked by head-to-head result (Celtics won 35-34).",
-        "Knicks and Bulls ranked by head-to-head result (Knicks won 50-42).",
-        "Thunder and Spurs ranked by total points scored.",
-        "Wizards and Clippers ranked by head-to-head result (Wizards won 37-28)."
+        "Knicks, Bulls, and Warriors ranked by total points scored.",
+        "Thunder and Lakers ranked by head-to-head result (Thunder won 59-38)."
       ]
     },
     {
@@ -375,24 +369,24 @@
         {
           "rank": 1,
           "team": "Celtics",
-          "w": 8,
+          "w": 10,
           "l": 0,
-          "gp": 8,
+          "gp": 10,
           "pct": "100.0%",
-          "pf": 383,
-          "pa": 230,
-          "pd": 153
+          "pf": 468,
+          "pa": 295,
+          "pd": 173
         },
         {
           "rank": 2,
           "team": "Hornets",
-          "w": 7,
+          "w": 8,
           "l": 0,
-          "gp": 7,
+          "gp": 8,
           "pct": "100.0%",
-          "pf": 259,
-          "pa": 218,
-          "pd": 41
+          "pf": 295,
+          "pa": 238,
+          "pd": 57
         },
         {
           "rank": 3,
@@ -407,25 +401,25 @@
         },
         {
           "rank": 4,
-          "team": "Pistons",
-          "w": 5,
-          "l": 1,
-          "gp": 6,
-          "pct": "83.3%",
-          "pf": 254,
-          "pa": 126,
-          "pd": 128
+          "team": "Lakers",
+          "w": 6,
+          "l": 2,
+          "gp": 8,
+          "pct": "75.0%",
+          "pf": 270,
+          "pa": 244,
+          "pd": 26
         },
         {
           "rank": 5,
-          "team": "Lakers",
+          "team": "Pistons",
           "w": 5,
-          "l": 2,
-          "gp": 7,
-          "pct": "71.4%",
-          "pf": 241,
-          "pa": 228,
-          "pd": 13
+          "l": 3,
+          "gp": 8,
+          "pct": "62.5%",
+          "pf": 320,
+          "pa": 211,
+          "pd": 109
         },
         {
           "rank": 6,
@@ -462,28 +456,39 @@
         },
         {
           "rank": 9,
-          "team": "Pacers",
-          "w": 2,
-          "l": 3,
-          "gp": 5,
-          "pct": "40.0%",
-          "pf": 207,
-          "pa": 187,
-          "pd": 20
+          "team": "Nuggets",
+          "w": 3,
+          "l": 5,
+          "gp": 8,
+          "pct": "37.5%",
+          "pf": 293,
+          "pa": 329,
+          "pd": -36
         },
         {
           "rank": 10,
-          "team": "Nuggets",
-          "w": 2,
+          "team": "Pacers",
+          "w": 3,
           "l": 5,
-          "gp": 7,
-          "pct": "28.6%",
-          "pf": 255,
-          "pa": 294,
-          "pd": -39
+          "gp": 8,
+          "pct": "37.5%",
+          "pf": 322,
+          "pa": 306,
+          "pd": 16
         },
         {
           "rank": 11,
+          "team": "Wizards",
+          "w": 2,
+          "l": 6,
+          "gp": 8,
+          "pct": "25.0%",
+          "pf": 196,
+          "pa": 256,
+          "pd": -60
+        },
+        {
+          "rank": 12,
           "team": "Bulls",
           "w": 2,
           "l": 7,
@@ -494,18 +499,18 @@
           "pd": -139
         },
         {
-          "rank": 12,
-          "team": "Wizards",
-          "w": 1,
-          "l": 6,
-          "gp": 7,
-          "pct": "14.3%",
-          "pf": 164,
-          "pa": 231,
-          "pd": -67
+          "rank": 13,
+          "team": "Thunder",
+          "w": 0,
+          "l": 9,
+          "gp": 9,
+          "pct": "0.0%",
+          "pf": 204,
+          "pa": 319,
+          "pd": -115
         },
         {
-          "rank": 13,
+          "rank": 14,
           "team": "Clippers",
           "w": 0,
           "l": 8,
@@ -514,22 +519,13 @@
           "pf": 178,
           "pa": 269,
           "pd": -91
-        },
-        {
-          "rank": 14,
-          "team": "Thunder",
-          "w": 0,
-          "l": 7,
-          "gp": 7,
-          "pct": "0.0%",
-          "pf": 159,
-          "pa": 251,
-          "pd": -92
         }
       ],
       "tiebreak_notes": [
         "Celtics and Hornets ranked by total points scored.",
-        "Thunder and Clippers ranked by total points scored."
+        "Pistons and Spurs ranked by total points scored.",
+        "Nuggets and Pacers ranked by head-to-head result (Nuggets won 38-35).",
+        "Clippers and Thunder ranked by total points scored."
       ]
     },
     {
@@ -550,38 +546,49 @@
         {
           "rank": 2,
           "team": "Pistons",
-          "w": 7,
+          "w": 8,
           "l": 1,
-          "gp": 8,
-          "pct": "87.5%",
-          "pf": 226,
-          "pa": 129,
-          "pd": 97
+          "gp": 9,
+          "pct": "88.9%",
+          "pf": 264,
+          "pa": 152,
+          "pd": 112
         },
         {
           "rank": 3,
-          "team": "Clippers",
+          "team": "Rockets",
           "w": 7,
           "l": 2,
           "gp": 9,
           "pct": "77.8%",
-          "pf": 274,
-          "pa": 218,
-          "pd": 56
+          "pf": 345,
+          "pa": 182,
+          "pd": 163
         },
         {
           "rank": 4,
-          "team": "Rockets",
-          "w": 6,
-          "l": 2,
-          "gp": 8,
-          "pct": "75.0%",
-          "pf": 300,
-          "pa": 164,
-          "pd": 136
+          "team": "Clippers",
+          "w": 7,
+          "l": 3,
+          "gp": 10,
+          "pct": "70.0%",
+          "pf": 295,
+          "pa": 247,
+          "pd": 48
         },
         {
           "rank": 5,
+          "team": "Lakers",
+          "w": 7,
+          "l": 3,
+          "gp": 10,
+          "pct": "70.0%",
+          "pf": 252,
+          "pa": 172,
+          "pd": 80
+        },
+        {
+          "rank": 6,
           "team": "Celtics",
           "w": 7,
           "l": 3,
@@ -590,17 +597,6 @@
           "pf": 239,
           "pa": 218,
           "pd": 21
-        },
-        {
-          "rank": 6,
-          "team": "Lakers",
-          "w": 6,
-          "l": 3,
-          "gp": 9,
-          "pct": "66.7%",
-          "pf": 231,
-          "pa": 157,
-          "pd": 74
         },
         {
           "rank": 7,
@@ -615,17 +611,6 @@
         },
         {
           "rank": 8,
-          "team": "Thunder",
-          "w": 3,
-          "l": 6,
-          "gp": 9,
-          "pct": "33.3%",
-          "pf": 208,
-          "pa": 250,
-          "pd": -42
-        },
-        {
-          "rank": 9,
           "team": "Charlotte",
           "w": 3,
           "l": 6,
@@ -636,48 +621,59 @@
           "pd": -21
         },
         {
+          "rank": 9,
+          "team": "Thunder",
+          "w": 3,
+          "l": 7,
+          "gp": 10,
+          "pct": "30.0%",
+          "pf": 231,
+          "pa": 288,
+          "pd": -57
+        },
+        {
           "rank": 10,
-          "team": "Magic",
-          "w": 2,
-          "l": 6,
-          "gp": 8,
-          "pct": "25.0%",
-          "pf": 109,
-          "pa": 207,
-          "pd": -98
+          "team": "Bulls",
+          "w": 3,
+          "l": 7,
+          "gp": 10,
+          "pct": "30.0%",
+          "pf": 179,
+          "pa": 236,
+          "pd": -57
         },
         {
           "rank": 11,
-          "team": "Warriors",
-          "w": 2,
+          "team": "Magic",
+          "w": 3,
           "l": 7,
-          "gp": 9,
-          "pct": "22.2%",
-          "pf": 133,
-          "pa": 208,
-          "pd": -75
+          "gp": 10,
+          "pct": "30.0%",
+          "pf": 152,
+          "pa": 252,
+          "pd": -100
         },
         {
           "rank": 12,
-          "team": "Bulls",
+          "team": "Warriors",
           "w": 2,
-          "l": 7,
-          "gp": 9,
-          "pct": "22.2%",
-          "pf": 155,
-          "pa": 222,
-          "pd": -67
+          "l": 8,
+          "gp": 10,
+          "pct": "20.0%",
+          "pf": 151,
+          "pa": 253,
+          "pd": -102
         },
         {
           "rank": 13,
           "team": "Knicks",
           "w": 0,
-          "l": 9,
-          "gp": 9,
+          "l": 10,
+          "gp": 10,
           "pct": "0.0%",
-          "pf": 135,
-          "pa": 279,
-          "pd": -144
+          "pf": 150,
+          "pa": 300,
+          "pd": -150
         },
         {
           "rank": 14,
@@ -692,8 +688,8 @@
         }
       ],
       "tiebreak_notes": [
-        "Thunder and Charlotte ranked by head-to-head result (Thunder won 29-26).",
-        "Warriors and Bulls ranked by head-to-head result (Warriors won 16-8).",
+        "Lakers, Celtics, and Clippers ranked by total points scored.",
+        "Bulls, Magic, and Thunder ranked by total points scored.",
         "Pacers and Knicks ranked by total points scored."
       ]
     },
@@ -703,36 +699,36 @@
       "teams": [
         {
           "rank": 1,
-          "team": "Lakers",
-          "w": 8,
-          "l": 0,
-          "gp": 8,
-          "pct": "100.0%",
-          "pf": 109,
-          "pa": 59,
-          "pd": 50
+          "team": "Heat",
+          "w": 9,
+          "l": 1,
+          "gp": 10,
+          "pct": "90.0%",
+          "pf": 175,
+          "pa": 118,
+          "pd": 57
         },
         {
           "rank": 2,
-          "team": "Heat",
+          "team": "Lakers",
           "w": 8,
           "l": 1,
           "gp": 9,
           "pct": "88.9%",
-          "pf": 161,
-          "pa": 110,
-          "pd": 51
+          "pf": 119,
+          "pa": 76,
+          "pd": 43
         },
         {
           "rank": 3,
           "team": "Celtics",
-          "w": 6,
+          "w": 7,
           "l": 2,
-          "gp": 8,
-          "pct": "75.0%",
-          "pf": 125,
-          "pa": 78,
-          "pd": 47
+          "gp": 9,
+          "pct": "77.8%",
+          "pf": 142,
+          "pa": 88,
+          "pd": 54
         },
         {
           "rank": 4,
@@ -769,80 +765,80 @@
         },
         {
           "rank": 7,
-          "team": "Pacers",
-          "w": 3,
+          "team": "Bulls",
+          "w": 4,
           "l": 4,
-          "gp": 7,
-          "pct": "42.9%",
-          "pf": 72,
-          "pa": 104,
-          "pd": -32
+          "gp": 8,
+          "pct": "50.0%",
+          "pf": 86,
+          "pa": 89,
+          "pd": -3
         },
         {
           "rank": 8,
-          "team": "Bulls",
-          "w": 3,
-          "l": 4,
-          "gp": 7,
-          "pct": "42.9%",
-          "pf": 66,
-          "pa": 77,
-          "pd": -11
+          "team": "Clippers",
+          "w": 4,
+          "l": 5,
+          "gp": 9,
+          "pct": "44.4%",
+          "pf": 122,
+          "pa": 121,
+          "pd": 1
         },
         {
           "rank": 9,
-          "team": "Clippers",
-          "w": 3,
+          "team": "Pacers",
+          "w": 4,
           "l": 5,
-          "gp": 8,
-          "pct": "37.5%",
-          "pf": 102,
-          "pa": 112,
-          "pd": -10
+          "gp": 9,
+          "pct": "44.4%",
+          "pf": 103,
+          "pa": 130,
+          "pd": -27
         },
         {
           "rank": 10,
           "team": "Knicks",
           "w": 3,
-          "l": 5,
-          "gp": 8,
-          "pct": "37.5%",
-          "pf": 117,
-          "pa": 104,
-          "pd": 13
+          "l": 6,
+          "gp": 9,
+          "pct": "33.3%",
+          "pf": 123,
+          "pa": 126,
+          "pd": -3
         },
         {
           "rank": 11,
           "team": "Pistons",
           "w": 2,
-          "l": 5,
-          "gp": 7,
-          "pct": "28.6%",
-          "pf": 75,
-          "pa": 95,
-          "pd": -20
+          "l": 6,
+          "gp": 8,
+          "pct": "25.0%",
+          "pf": 87,
+          "pa": 115,
+          "pd": -28
         },
         {
           "rank": 12,
-          "team": "Charlotte",
+          "team": "Wizards",
           "w": 1,
-          "l": 8,
-          "gp": 9,
-          "pct": "11.1%",
-          "pf": 69,
-          "pa": 137,
-          "pd": -68
+          "l": 9,
+          "gp": 10,
+          "pct": "10.0%",
+          "pf": 60,
+          "pa": 127,
+          "pd": -67
         },
         {
           "rank": 13,
-          "team": "Wizards",
-          "w": 0,
-          "l": 8,
-          "gp": 8,
-          "pct": "0.0%",
-          "pf": 44,
-          "pa": 107,
-          "pd": -63
+          "team": "Charlotte",
+          "w": 1,
+          "l": 9,
+          "gp": 10,
+          "pct": "10.0%",
+          "pf": 75,
+          "pa": 145,
+          "pd": -70
         },
         {
           "rank": 14,
@@ -858,9 +854,8 @@
       ],
       "tiebreak_notes": [
         "Thunder and Warriors ranked by head-to-head result (Thunder won 16-14).",
-        "Pacers and Bulls ranked by total points scored.",
-        "Clippers and Knicks ranked by head-to-head result (Clippers won 17-14).",
-        "Suns and Wizards ranked by total points scored."
+        "Clippers and Pacers ranked by head-to-head result (Clippers won 20-9).",
+        "Wizards and Charlotte ranked by head-to-head result (Wizards won 8-6)."
       ]
     },
     {
@@ -870,57 +865,57 @@
         {
           "rank": 1,
           "team": "Celtics",
-          "w": 9,
+          "w": 10,
           "l": 1,
-          "gp": 10,
-          "pct": "90.0%",
-          "pf": 217,
-          "pa": 61,
-          "pd": 156
+          "gp": 11,
+          "pct": "90.9%",
+          "pf": 236,
+          "pa": 63,
+          "pd": 173
         },
         {
           "rank": 2,
           "team": "Heat",
-          "w": 6,
+          "w": 7,
           "l": 2,
-          "gp": 8,
-          "pct": "75.0%",
-          "pf": 123,
-          "pa": 80,
-          "pd": 43
+          "gp": 9,
+          "pct": "77.8%",
+          "pf": 141,
+          "pa": 92,
+          "pd": 49
         },
         {
           "rank": 3,
           "team": "Warriors",
           "w": 5,
-          "l": 2,
-          "gp": 7,
-          "pct": "71.4%",
-          "pf": 102,
-          "pa": 92,
-          "pd": 10
+          "l": 3,
+          "gp": 8,
+          "pct": "62.5%",
+          "pf": 114,
+          "pa": 110,
+          "pd": 4
         },
         {
           "rank": 4,
           "team": "Lakers",
           "w": 4,
           "l": 4,
-          "gp": 8,
+          "gp": 9,
           "pct": "50.0%",
-          "pf": 77,
-          "pa": 106,
+          "pf": 85,
+          "pa": 114,
           "pd": -29
         },
         {
           "rank": 5,
           "team": "Bulls",
           "w": 3,
-          "l": 4,
-          "gp": 7,
-          "pct": "42.9%",
-          "pf": 48,
-          "pa": 66,
-          "pd": -18
+          "l": 5,
+          "gp": 9,
+          "pct": "38.9%",
+          "pf": 58,
+          "pa": 93,
+          "pd": -35
         },
         {
           "rank": 6,
@@ -952,36 +947,36 @@
       "teams": [
         {
           "rank": 1,
-          "team": "Knicks",
+          "team": "Spurs",
           "w": 8,
-          "l": 1,
-          "gp": 9,
-          "pct": "88.9%",
-          "pf": 373,
-          "pa": 245,
-          "pd": 128
+          "l": 2,
+          "gp": 10,
+          "pct": "80.0%",
+          "pf": 338,
+          "pa": 224,
+          "pd": 114
         },
         {
           "rank": 2,
-          "team": "Spurs",
-          "w": 7,
+          "team": "Knicks",
+          "w": 8,
           "l": 2,
-          "gp": 9,
-          "pct": "77.8%",
-          "pf": 283,
-          "pa": 181,
-          "pd": 102
+          "gp": 10,
+          "pct": "80.0%",
+          "pf": 416,
+          "pa": 300,
+          "pd": 116
         },
         {
           "rank": 3,
           "team": "Lakers",
-          "w": 5,
+          "w": 7,
           "l": 4,
-          "gp": 9,
-          "pct": "55.6%",
-          "pf": 223,
-          "pa": 185,
-          "pd": 38
+          "gp": 11,
+          "pct": "63.6%",
+          "pf": 271,
+          "pa": 223,
+          "pd": 48
         },
         {
           "rank": 4,
@@ -1009,13 +1004,16 @@
           "rank": 6,
           "team": "Bulls",
           "w": 1,
-          "l": 8,
-          "gp": 9,
-          "pct": "11.1%",
-          "pf": 189,
-          "pa": 325,
-          "pd": -136
+          "l": 10,
+          "gp": 11,
+          "pct": "9.1%",
+          "pf": 227,
+          "pa": 373,
+          "pd": -146
         }
+      ],
+      "tiebreak_notes": [
+        "Spurs and Knicks ranked by head-to-head wins across 2 games (Spurs 2-0)."
       ]
     },
     {
@@ -1026,57 +1024,60 @@
           "rank": 1,
           "team": "Celtics",
           "w": 7,
-          "l": 2,
-          "gp": 9,
-          "pct": "77.8%",
-          "pf": 341,
-          "pa": 154,
-          "pd": 187
+          "l": 3,
+          "gp": 10,
+          "pct": "70.0%",
+          "pf": 355,
+          "pa": 189,
+          "pd": 166
         },
         {
           "rank": 2,
-          "team": "Lakers",
-          "w": 5,
-          "l": 3,
-          "gp": 8,
-          "pct": "62.5%",
-          "pf": 204,
-          "pa": 172,
-          "pd": 32
+          "team": "Heat",
+          "w": 6,
+          "l": 4,
+          "gp": 10,
+          "pct": "60.0%",
+          "pf": 261,
+          "pa": 194,
+          "pd": 67
         },
         {
           "rank": 3,
-          "team": "Heat",
-          "w": 4,
+          "team": "Lakers",
+          "w": 6,
           "l": 4,
-          "gp": 8,
-          "pct": "50.0%",
-          "pf": 203,
-          "pa": 164,
-          "pd": 39
+          "gp": 10,
+          "pct": "60.0%",
+          "pf": 247,
+          "pa": 201,
+          "pd": 46
         },
         {
           "rank": 4,
           "team": "Warriors",
-          "w": 4,
+          "w": 5,
           "l": 5,
-          "gp": 9,
-          "pct": "44.4%",
-          "pf": 159,
-          "pa": 250,
-          "pd": -91
+          "gp": 10,
+          "pct": "50.0%",
+          "pf": 183,
+          "pa": 261,
+          "pd": -78
         },
         {
           "rank": 5,
           "team": "Bulls",
           "w": 1,
-          "l": 7,
-          "gp": 8,
-          "pct": "12.5%",
-          "pf": 70,
-          "pa": 237,
-          "pd": -167
+          "l": 9,
+          "gp": 10,
+          "pct": "10.0%",
+          "pf": 87,
+          "pa": 288,
+          "pd": -201
         }
+      ],
+      "tiebreak_notes": [
+        "Heat and Lakers ranked by head-to-head wins across 3 games (Heat 2-1)."
       ]
     },
     {
@@ -1142,12 +1143,12 @@
           "rank": 6,
           "team": "Bulls",
           "w": 2,
-          "l": 6,
-          "gp": 8,
-          "pct": "25.0%",
-          "pf": 76,
-          "pa": 128,
-          "pd": -52
+          "l": 7,
+          "gp": 9,
+          "pct": "22.2%",
+          "pf": 78,
+          "pa": 141,
+          "pd": -63
         },
         {
           "rank": 7,
