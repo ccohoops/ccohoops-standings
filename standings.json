@@ -38,7 +38,7 @@
       "teams": [
         {
           "rank": 1,
-          "team": "1 Bosse",
+          "team": "Grizzlies",
           "w": 0,
           "l": 0,
           "gp": 0,
@@ -49,7 +49,7 @@
         },
         {
           "rank": 2,
-          "team": "2 Dewey",
+          "team": "Heat",
           "w": 0,
           "l": 0,
           "gp": 0,
@@ -60,7 +60,7 @@
         },
         {
           "rank": 3,
-          "team": "3 Graziani",
+          "team": "Pacers",
           "w": 0,
           "l": 0,
           "gp": 0,
@@ -71,7 +71,7 @@
         },
         {
           "rank": 4,
-          "team": "4 Healey",
+          "team": "Pelicans",
           "w": 0,
           "l": 0,
           "gp": 0,
@@ -82,7 +82,7 @@
         },
         {
           "rank": 5,
-          "team": "5 Januszka",
+          "team": "Spurs",
           "w": 0,
           "l": 0,
           "gp": 0,
@@ -99,7 +99,7 @@
       "teams": [
         {
           "rank": 1,
-          "team": "1 Carpenter",
+          "team": "Bulls",
           "w": 0,
           "l": 0,
           "gp": 0,
@@ -110,7 +110,7 @@
         },
         {
           "rank": 2,
-          "team": "2 Edstrom",
+          "team": "Celtics",
           "w": 0,
           "l": 0,
           "gp": 0,
@@ -121,7 +121,7 @@
         },
         {
           "rank": 3,
-          "team": "3 Felsen",
+          "team": "Grizzlies",
           "w": 0,
           "l": 0,
           "gp": 0,
@@ -132,7 +132,7 @@
         },
         {
           "rank": 4,
-          "team": "4 Maldonado",
+          "team": "Lakers",
           "w": 0,
           "l": 0,
           "gp": 0,
@@ -143,7 +143,7 @@
         },
         {
           "rank": 5,
-          "team": "5 Martin",
+          "team": "Pacers",
           "w": 0,
           "l": 0,
           "gp": 0,
@@ -154,7 +154,7 @@
         },
         {
           "rank": 6,
-          "team": "6 Rodriguez",
+          "team": "Pelicans",
           "w": 0,
           "l": 0,
           "gp": 0,
@@ -165,7 +165,7 @@
         },
         {
           "rank": 7,
-          "team": "7 Wiborg",
+          "team": "Spurs",
           "w": 0,
           "l": 0,
           "gp": 0,
@@ -176,7 +176,7 @@
         },
         {
           "rank": 8,
-          "team": "8 Willis",
+          "team": "Thunder",
           "w": 0,
           "l": 0,
           "gp": 0,
@@ -193,39 +193,6 @@
       "teams": [
         {
           "rank": 1,
-          "team": "1 Boyle",
-          "w": 0,
-          "l": 0,
-          "gp": 0,
-          "pct": "0.0%",
-          "pf": 0,
-          "pa": 0,
-          "pd": 0
-        },
-        {
-          "rank": 2,
-          "team": "2 Browne",
-          "w": 0,
-          "l": 0,
-          "gp": 0,
-          "pct": "0.0%",
-          "pf": 0,
-          "pa": 0,
-          "pd": 0
-        },
-        {
-          "rank": 3,
-          "team": "3 Price",
-          "w": 0,
-          "l": 0,
-          "gp": 0,
-          "pct": "0.0%",
-          "pf": 0,
-          "pa": 0,
-          "pd": 0
-        },
-        {
-          "rank": 4,
           "team": "4 Salazar",
           "w": 0,
           "l": 0,
@@ -236,8 +203,41 @@
           "pd": 0
         },
         {
+          "rank": 2,
+          "team": "Grizzlies",
+          "w": 0,
+          "l": 0,
+          "gp": 0,
+          "pct": "0.0%",
+          "pf": 0,
+          "pa": 0,
+          "pd": 0
+        },
+        {
+          "rank": 3,
+          "team": "Celtics",
+          "w": 0,
+          "l": 0,
+          "gp": 0,
+          "pct": "0.0%",
+          "pf": 0,
+          "pa": 0,
+          "pd": 0
+        },
+        {
+          "rank": 4,
+          "team": "Lakers",
+          "w": 0,
+          "l": 0,
+          "gp": 0,
+          "pct": "0.0%",
+          "pf": 0,
+          "pa": 0,
+          "pd": 0
+        },
+        {
           "rank": 5,
-          "team": "5 Silvera",
+          "team": "Pacers",
           "w": 0,
           "l": 0,
           "gp": 0,
@@ -248,7 +248,7 @@
         },
         {
           "rank": 6,
-          "team": "6 Soreide",
+          "team": "Spurs",
           "w": 0,
           "l": 0,
           "gp": 0,
@@ -265,7 +265,7 @@
       "teams": [
         {
           "rank": 1,
-          "team": "1 Herman",
+          "team": "Celtics",
           "w": 0,
           "l": 0,
           "gp": 0,
@@ -276,7 +276,7 @@
         },
         {
           "rank": 2,
-          "team": "2 Kowalsky",
+          "team": "Grizzlies",
           "w": 0,
           "l": 0,
           "gp": 0,
@@ -287,7 +287,7 @@
         },
         {
           "rank": 3,
-          "team": "3 Maldonado",
+          "team": "Heat",
           "w": 0,
           "l": 0,
           "gp": 0,
@@ -298,7 +298,7 @@
         },
         {
           "rank": 4,
-          "team": "4 Martino",
+          "team": "Lakers",
           "w": 0,
           "l": 0,
           "gp": 0,
@@ -309,7 +309,7 @@
         },
         {
           "rank": 5,
-          "team": "5 McRae",
+          "team": "Pacers",
           "w": 0,
           "l": 0,
           "gp": 0,
@@ -320,7 +320,7 @@
         },
         {
           "rank": 6,
-          "team": "6 Mora",
+          "team": "Pelicans",
           "w": 0,
           "l": 0,
           "gp": 0,
@@ -331,7 +331,7 @@
         },
         {
           "rank": 7,
-          "team": "Heat - Meyer",
+          "team": "Spurs",
           "w": 0,
           "l": 0,
           "gp": 0,
@@ -348,7 +348,7 @@
       "teams": [
         {
           "rank": 1,
-          "team": "DiStefano",
+          "team": "Bulls",
           "w": 0,
           "l": 0,
           "gp": 0,
@@ -359,7 +359,7 @@
         },
         {
           "rank": 2,
-          "team": "Gonzalez",
+          "team": "Celtics",
           "w": 0,
           "l": 0,
           "gp": 0,
@@ -370,7 +370,7 @@
         },
         {
           "rank": 3,
-          "team": "Joseph",
+          "team": "Heat",
           "w": 0,
           "l": 0,
           "gp": 0,
@@ -381,7 +381,7 @@
         },
         {
           "rank": 4,
-          "team": "Nichols",
+          "team": "Lakers",
           "w": 0,
           "l": 0,
           "gp": 0,
@@ -392,7 +392,7 @@
         },
         {
           "rank": 5,
-          "team": "TBD",
+          "team": "Spurs",
           "w": 0,
           "l": 0,
           "gp": 0,
@@ -403,7 +403,7 @@
         },
         {
           "rank": 6,
-          "team": "Ward",
+          "team": "Thunder",
           "w": 0,
           "l": 0,
           "gp": 0,
@@ -420,7 +420,7 @@
       "teams": [
         {
           "rank": 1,
-          "team": "1 Cisneros",
+          "team": "Bulls",
           "w": 0,
           "l": 0,
           "gp": 0,
@@ -431,7 +431,7 @@
         },
         {
           "rank": 2,
-          "team": "2 Cruz",
+          "team": "Celtics",
           "w": 0,
           "l": 0,
           "gp": 0,
@@ -442,7 +442,7 @@
         },
         {
           "rank": 3,
-          "team": "3 Honorat",
+          "team": "Grizzlies",
           "w": 0,
           "l": 0,
           "gp": 0,
@@ -453,7 +453,7 @@
         },
         {
           "rank": 4,
-          "team": "4 Mansilla",
+          "team": "Heat",
           "w": 0,
           "l": 0,
           "gp": 0,
@@ -464,7 +464,7 @@
         },
         {
           "rank": 5,
-          "team": "5 Mercier",
+          "team": "Lakers",
           "w": 0,
           "l": 0,
           "gp": 0,
@@ -475,7 +475,7 @@
         },
         {
           "rank": 6,
-          "team": "6 Noto",
+          "team": "Pacers",
           "w": 0,
           "l": 0,
           "gp": 0,
@@ -486,7 +486,7 @@
         },
         {
           "rank": 7,
-          "team": "7 Torres",
+          "team": "Spurs",
           "w": 0,
           "l": 0,
           "gp": 0,
@@ -503,7 +503,7 @@
       "teams": [
         {
           "rank": 1,
-          "team": "1 Ferraro",
+          "team": "Celtics",
           "w": 0,
           "l": 0,
           "gp": 0,
@@ -514,7 +514,7 @@
         },
         {
           "rank": 2,
-          "team": "2 Nolte",
+          "team": "Grizzlies",
           "w": 0,
           "l": 0,
           "gp": 0,
@@ -525,7 +525,7 @@
         },
         {
           "rank": 3,
-          "team": "3 Skinner",
+          "team": "Spurs",
           "w": 0,
           "l": 0,
           "gp": 0,
@@ -536,7 +536,7 @@
         },
         {
           "rank": 4,
-          "team": "4 Wallace",
+          "team": "Thunder",
           "w": 0,
           "l": 0,
           "gp": 0,
@@ -553,7 +553,7 @@
       "teams": [
         {
           "rank": 1,
-          "team": "1 Carpenter",
+          "team": "Celtics",
           "w": 0,
           "l": 0,
           "gp": 0,
@@ -564,7 +564,7 @@
         },
         {
           "rank": 2,
-          "team": "2 Casey",
+          "team": "Grizzlies",
           "w": 0,
           "l": 0,
           "gp": 0,
@@ -575,7 +575,7 @@
         },
         {
           "rank": 3,
-          "team": "3 Ferraro",
+          "team": "Pacers",
           "w": 0,
           "l": 0,
           "gp": 0,
@@ -586,7 +586,7 @@
         },
         {
           "rank": 4,
-          "team": "4 Robledo",
+          "team": "Pelicans",
           "w": 0,
           "l": 0,
           "gp": 0,
@@ -603,7 +603,7 @@
       "teams": [
         {
           "rank": 1,
-          "team": "1 Granger",
+          "team": "Celtics",
           "w": 0,
           "l": 0,
           "gp": 0,
@@ -614,7 +614,7 @@
         },
         {
           "rank": 2,
-          "team": "2 Lavin",
+          "team": "Heat",
           "w": 0,
           "l": 0,
           "gp": 0,
@@ -625,7 +625,7 @@
         },
         {
           "rank": 3,
-          "team": "3 Meyer",
+          "team": "Lakers",
           "w": 0,
           "l": 0,
           "gp": 0,
@@ -636,7 +636,7 @@
         },
         {
           "rank": 4,
-          "team": "4 Valdes",
+          "team": "Pacers",
           "w": 0,
           "l": 0,
           "gp": 0,
@@ -647,7 +647,7 @@
         },
         {
           "rank": 5,
-          "team": "5 Voloshenko",
+          "team": "Spurs",
           "w": 0,
           "l": 0,
           "gp": 0,
