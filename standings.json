@@ -1,6 +1,6 @@
 {
   "season": "Fall 2026",
-  "updated": "2026-08-25",
+  "updated": "2026-09-10",
   "columns": [
     {
       "key": "w",
@@ -193,17 +193,6 @@
       "teams": [
         {
           "rank": 1,
-          "team": "4 Salazar",
-          "w": 0,
-          "l": 0,
-          "gp": 0,
-          "pct": "0.0%",
-          "pf": 0,
-          "pa": 0,
-          "pd": 0
-        },
-        {
-          "rank": 2,
           "team": "Grizzlies",
           "w": 0,
           "l": 0,
@@ -214,7 +203,7 @@
           "pd": 0
         },
         {
-          "rank": 3,
+          "rank": 2,
           "team": "Celtics",
           "w": 0,
           "l": 0,
@@ -225,7 +214,7 @@
           "pd": 0
         },
         {
-          "rank": 4,
+          "rank": 3,
           "team": "Lakers",
           "w": 0,
           "l": 0,
@@ -236,8 +225,19 @@
           "pd": 0
         },
         {
-          "rank": 5,
+          "rank": 4,
           "team": "Pacers",
+          "w": 0,
+          "l": 0,
+          "gp": 0,
+          "pct": "0.0%",
+          "pf": 0,
+          "pa": 0,
+          "pd": 0
+        },
+        {
+          "rank": 5,
+          "team": "Pelicans",
           "w": 0,
           "l": 0,
           "gp": 0,
